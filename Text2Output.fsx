@@ -1,3 +1,6 @@
+open System.Web.Configuration
+open System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
+open System.Windows.Forms.VisualStyles.VisualStyleElement.TreeView
 let m = [2;3;4;5]
 1 :: m
 m @ m
@@ -18,4 +21,23 @@ let a= (fun  m ->
 ) 
 
 let a = Some("d")
+
+type CompanyTypes =
+    CompanyUnderManagement
+    | Trust
+    | Branch
+
+
+let c = Branch
+
+let b s =
+    match s with
+    | CompanyUnderManagement -> 1
+    | Trust -> 2
+    | Branch -> 3
+
+b CompanyTypes.Branch
+
+
+
 
